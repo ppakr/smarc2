@@ -57,6 +57,8 @@ class SAMCaptain(Node):
 
         # status publisher
         self._status_publisher = SAMStatusPublisher(self)
+        # TODO: call controller
+        # TODO: control timer
         self.get_logger().info("SAMStatusPublisher has been created.")
 
 
@@ -193,6 +195,8 @@ class SAMCaptain(Node):
             and self.latest_geofence_status is not None
             and self.latest_geofence_status.status == GeofenceStatusStamped.STATUS_OUTSIDE
         )
+
+    # TODO control callback
     
 def main(args=None):
     rclpy.init(args=args)
