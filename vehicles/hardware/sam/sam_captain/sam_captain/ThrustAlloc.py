@@ -2,6 +2,7 @@
 import numpy as np
 
 class ThrustAlloc:
+    """Map forces to RPM and nozzle angles"""
     def __init__(self, thruster_arm, force_data, rpm_data, rpm_signs, nozzle_signs, vbs_neutral, lcg_neutral, rpm_min, angle_max, angle_sum_max):
         """
         force_data:
