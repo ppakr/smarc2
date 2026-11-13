@@ -17,12 +17,6 @@ class ActuatorCmd:
 @dataclass
 class RequestedEffort:
     surge: float
-    depth: float
+    heave: float
     pitch: float
 
-@dataclass
-class AllocationResult:
-    cmd: ActuatorCmd
-    req: RequestedEffort
-    predicted: RequestedEffort
-    residual: RequestedEffort
