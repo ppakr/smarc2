@@ -13,4 +13,16 @@ class ActuatorCmd:
     thrust_vect: float
     vbs: float
     lcg: float
-    
+
+@dataclass
+class RequestedEffort:
+    surge: float
+    depth: float
+    pitch: float
+
+@dataclass
+class AllocationResult:
+    cmd: ActuatorCmd
+    req: RequestedEffort
+    predicted: RequestedEffort
+    residual: RequestedEffort

@@ -1,21 +1,8 @@
 # TODO: simple SAM controller
 # pitch-depth control
 # velocity control
-from dataclasses import dataclass
 from sam_diving_controller.controllers.PIDControl import PIDControl
-
-@dataclass
-class ControlState:
-    surge_m_s: float
-    depth_m: float
-    pitch_deg: float
-
-@dataclass
-class ActuatorCmd:
-    rpm: float
-    thrust_vect: float
-    vbs: float
-    lcg: float
+from sam_captain.control_type import ControlState, ActuatorCmd
 
 class SAMSimpleController:
     """A simple controller for the SAM vehicle"""
@@ -33,6 +20,10 @@ class SAMSimpleController:
 
     def update(self):
         """Takes state, desired state, and dt to compute control. Returns actuators controls"""
+        # TODO: get current state
+        # TODO: get desired state
+        # TODO: compute control
+        # TODO: allocate control
         pass
 
     def reset(self):
